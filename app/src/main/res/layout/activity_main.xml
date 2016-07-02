@@ -9,7 +9,7 @@
         android:layout_width="match_parent"
         android:layout_height="?attr/actionBarSize"
         android:background="?attr/colorPrimary"
-        
+
         >
         <TextView
             android:layout_width="match_parent"
@@ -45,4 +45,12 @@
 
     </ListView>
     </FrameLayout>
+    <Button
+        android:id="@+id/bConnectionNew"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="@color/app_name"
+        android:background="@color/colorPrimaryDark"
+        android:layout_alignParentBottom="true"
+        android:text="@string/scan_device"/>
 </LinearLayout>

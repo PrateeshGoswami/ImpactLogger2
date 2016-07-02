@@ -17,6 +17,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.AdapterView;
 import android.widget.BaseAdapter;
+import android.widget.Button;
 import android.widget.ListView;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -29,6 +30,7 @@ public class DeviceScanActivity extends AppCompatActivity {
     private boolean mScanning;
     private Handler mHandler;
     ListView listView;
+    Button scan_btn;
 
     private static final int REQUEST_ENABLE_BT = 1;
     // Stops scanning after 10 seconds.
@@ -62,6 +64,15 @@ public class DeviceScanActivity extends AppCompatActivity {
             finish();
             return;
         }
+        Button scan_btn = (Button) findViewById(R.id.bConnectionNew);
+        scan_btn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                mLeDeviceListAdapter.clear();
+                scanLeDevice(true);
+            }
+        });
+        
     }
 
     @Override
