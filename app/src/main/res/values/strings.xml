@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">ImpactLogger</string>
+    <string name="app_name" translatable="false">ImpactLogger</string>
     <string name="ble_not_supported">BLE is not supported</string>
     <string name="label_data">Data:</string>
     <string name="label_device_address">Device address:</string>
@@ -18,6 +18,9 @@
     <string name="status_connected">Connected</string>
     <string name="status_not_connected">Connection Lost</string>
     <string name="details">Details</string>
+
+    <!--contentDescription -->
+    <string name="contentDesc_scanDevices">Scan for Devices</string>
 
     <string name="unknown_device">Unknown device</string>
     <string name="unknown_characteristic">Unknown characteristic</string>

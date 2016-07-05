@@ -52,5 +52,6 @@
         android:textColor="@color/app_name"
         android:background="@color/primary"
         android:layout_alignParentBottom="true"
+        android:contentDescription="@string/contentDesc_scanDevices"
         android:text="@string/scan_device"/>
 </LinearLayout>
