@@ -1,9 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:ads="http://schemas.android.com/apk/res-auto"
     android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
     <android.support.v7.widget.Toolbar
         android:id="@+id/toolbar"
         android:layout_width="match_parent"
@@ -27,7 +31,7 @@
         android:text="@string/device_list"
         android:textColor="@color/primary_text"
         android:textSize="@dimen/title_text_size"
-        android:layout_below="@+id/listview_devices"/>
+        />
     <View
         android:layout_width="match_parent"
         android:layout_height="1dp"
@@ -54,4 +58,14 @@
         android:layout_alignParentBottom="true"
         android:contentDescription="@string/contentDesc_scanDevices"
         android:text="@string/scan_device"/>
-</LinearLayout>
+
+    </LinearLayout>
+    <com.google.android.gms.ads.AdView
+        android:id="@+id/adView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        ads:adSize="BANNER"
+        ads:adUnitId="@string/banner_ad_unit_id"></com.google.android.gms.ads.AdView>
+</RelativeLayout>
